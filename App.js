@@ -4,6 +4,7 @@ import response from "./response.json";
 import AppHead from "./components/AppHead";
 import AppBody from "./components/AppBody";
 
+
 export default class MyApp extends Component {
   constructor(props){
     super();
@@ -16,7 +17,6 @@ export default class MyApp extends Component {
       <AppHead respdata = {response}/>
       <AppBody respdata = {response} styles={styles} />
       
-
       </View>
     );
   }
@@ -30,7 +30,7 @@ const styles = StyleSheet.create ({
      flexDirection: 'column',
      justifyContent: 'center',
      alignItems: 'center',
-     backgroundColor: 'gray',
+     backgroundColor: 'lightgray',
      height: 600
   },
   redbox: {

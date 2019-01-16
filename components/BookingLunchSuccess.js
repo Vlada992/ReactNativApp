@@ -1,15 +1,14 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Image, Text, View, Button } from 'react-native';
+import { StyleSheet, Image, Text, View, Button } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 
 
 class BookingLunchSuccess extends React.Component {      //i can EXPORT these class instances from this line also
     constructor(props){
-        super()
+        super();
     }
     render(){
-        console.log('prazno ili ne:', this.props.allData.pages[0].xsFields[5].actions.onPress[0].name)
         let styleCont = this.props.allData.pages[0].xsFields[0].styles
         let styleIcon = this.props.allData.pages[0].xsFields[2].styles
         let styleText = this.props.allData.pages[0].xsFields[3].styles
@@ -19,7 +18,7 @@ class BookingLunchSuccess extends React.Component {      //i can EXPORT these cl
         let popPage= function(){}
 
         return (
-            <View style= {styleCont }>
+            <View>
 
         
             <View>
@@ -29,9 +28,7 @@ class BookingLunchSuccess extends React.Component {      //i can EXPORT these cl
             <Text>{this.props.allData.pages[0].issueDate}</Text>
             </View>
 
-            <View style={this.props.allData.pages[0].xsFields[1].styles}>
-            <Text>{this.props.allData.pages[0].xsFields[1].elementName}</Text>
-
+            <View >
             <Text>
             <FontAwesome 
             name={this.props.allData.pages[0].xsFields[2].settings.icon} style={styleIcon} 
@@ -42,7 +39,6 @@ class BookingLunchSuccess extends React.Component {      //i can EXPORT these cl
             <Button onPress={popPage}  style={this.props.allData.pages[0].xsFields[5].styles}
             title={this.props.allData.pages[0].xsFields[5].settings.text}
             accessibilityLabel="Learn more..."></Button>
-
             </View>
 
             
